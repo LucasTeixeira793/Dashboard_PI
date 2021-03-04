@@ -12,22 +12,22 @@ $(function () {
 
     //ct-visits
     new Chartist.Line('#ct-visits', {
-        labels: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+        labels: ['1 - 6', '7 - 13', '14 - 20', '21 - 27', '28 - 31'],
         series: [
-            [5, 2, 7, 4, 5, 3, 5, 4]
-            , [2, 5, 2, 6, 2, 5, 2, 4]
+            [5, 2, 7, 4, 5]
+            , [2, 5, 2, 6, 2]
         ]
     }, {
         top: 0,
         low: 1,
-        showPoint: true,
-        fullWidth: true,
+        showPoint: false,
+        fullWidth: false,
         plugins: [
             Chartist.plugins.tooltip()
         ],
         axisY: {
             labelInterpolationFnc: function (value) {
-                return (value / 1) + 'k';
+                return (value / 1);
             }
         },
         showArea: true
@@ -43,7 +43,7 @@ $(function () {
             barWidth: '4',
             resize: true,
             barSpacing: '5',
-            barColor: '#7ace4c'
+            barColor: '#187000'
         });
         $('#sparklinedash2').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
             type: 'bar',
@@ -51,7 +51,7 @@ $(function () {
             barWidth: '4',
             resize: true,
             barSpacing: '5',
-            barColor: '#7460ee'
+            barColor: '#e6dc29'
         });
         $('#sparklinedash3').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
             type: 'bar',
@@ -59,7 +59,7 @@ $(function () {
             barWidth: '4',
             resize: true,
             barSpacing: '5',
-            barColor: '#11a0f8'
+            barColor: '#e30000'
         });
         $('#sparklinedash4').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
             type: 'bar',
